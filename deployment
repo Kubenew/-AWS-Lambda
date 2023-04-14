@@ -1,0 +1,13 @@
+- Name: Deploy
+  Actions:
+    - Name: DeployLambdaFunction
+      ActionTypeId:
+        Category: Deploy
+        Owner: AWS
+        Provider: CloudFormation
+        Version: '1'
+      Configuration:
+        StackName: my-lambda-function
+        TemplatePath: buildspec.yml
+        S3Bucket: my-bucket
+        S3Key: my-function.zip
