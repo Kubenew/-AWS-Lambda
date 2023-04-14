@@ -1,0 +1,10 @@
+Resources:
+  MyFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      Code:
+        S3Bucket: my-bucket
+        S3Key: my-function.zip
+      Handler: index.handler
+      Runtime: nodejs12.x
+      Role: arn:aws:iam::123456789012:role/lambda-execution-role
